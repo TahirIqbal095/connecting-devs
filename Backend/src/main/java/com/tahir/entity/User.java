@@ -1,12 +1,10 @@
 package com.tahir.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 @Entity
+@Table(name = "registered_users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,13 +12,13 @@ public class User {
 
     private String name;
     private String about;
-    private Date birthDate;
+    private String birthDate;
 
     public User() {
 
     }
 
-    public User(String name, String about, Date birthDate) {
+    public User(String name, String about, String birthDate) {
         this.name = name;
         this.about = about;
         this.birthDate = birthDate;
@@ -42,11 +40,11 @@ public class User {
         this.about = about;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
