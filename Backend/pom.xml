@@ -8,10 +8,12 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.tahir</groupId>
-	<artifactId>connectingdevs</artifactId>
+	<artifactId>connectingDevs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>connectingdevs</name>
+	<name>connectingDevs</name>
+
 	<description>Connecting-Developers</description>
 	<properties>
 		<java.version>17</java.version>

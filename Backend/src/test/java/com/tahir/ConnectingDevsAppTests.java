@@ -1,10 +1,10 @@
-package com.tahir.connectingdevs;
+package com.tahir;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConnectingdevsApplicationTests {
+class ConnectingDevsAppTests {
 
 	@Test
 	void contextLoads() {

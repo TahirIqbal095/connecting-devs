@@ -1,13 +1,13 @@
-package com.tahir.connectingdevs;
+package com.tahir;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConnectingdevsApplication {
+public class ConnectingDevsApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConnectingdevsApplication.class, args);
+		SpringApplication.run(ConnectingDevsApp.class, args);
 	}
 
 }
