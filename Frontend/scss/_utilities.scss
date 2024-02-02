@@ -1,3 +1,19 @@
+// container
+
+.container {
+    max-width: $container-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+
+    p > i {
+        color: $primary-color;
+    }
+}
+
+
 // text styles
 
 .x-large {
@@ -7,7 +23,7 @@
 }
 
 .large {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -15,6 +31,10 @@
 .lead {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.text-primary {
+    color: $primary-color;
 }
 
 
@@ -93,6 +113,30 @@
     }
 
 }
+
+// alert 
+
+.alert {
+    padding: 0.8rem;
+    margin: 1rem;
+    opacity: 0.8;
+    background: $light-color;
+    color: #333;
+
+    &.alert-primary {
+        @include set-background($primary-color)
+    }
+    &.alert-dark {
+        @include set-background($dark-color)
+    }
+    &.alert-success {
+        @include set-background($success-color)
+    }
+    &.alert-danger {
+        @include set-background($danger-color)
+    }
+}
+
 
 .dark-overlay {
     height: 100%;

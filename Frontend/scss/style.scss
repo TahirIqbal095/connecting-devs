@@ -1,5 +1,7 @@
+
 @import "config";
-@import "utilities";  
+@import "utilities";
+@import "form";
 
 * {
     box-sizing: border-box;
@@ -18,6 +20,11 @@ body {
 a {
     text-decoration: none;
     color: $primary-color;
+}
+
+
+h1 {
+    font-weight: 500;
 }
 
 ul {
@@ -75,9 +82,6 @@ img {
         justify-content: center;
         text-align: center;
 
-        h1 {
-            font-weight: 500;
-        }
     }
 }
 
