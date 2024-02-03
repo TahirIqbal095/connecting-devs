@@ -4,7 +4,7 @@ import com.tahir.model.User;
 import com.tahir.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("http://localhost:5500")
+@CrossOrigin(origins = "http://localhost:5500")
 @RestController
 @RequestMapping("/api")
 public class UserController {

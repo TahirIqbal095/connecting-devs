@@ -19,9 +19,9 @@
     ></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-    <title>Register into ConnectingDevs</title>
+    <title>Login into ConnectingDevs</title>
   </head>
   <body>
     <!-- navbar -->
@@ -41,15 +41,20 @@
     </nav>
 
     <section class="container">
-      <h1 class="large text-primary">Sign up</h1>
+
+      <!-- alert -->
+      <div class="alert alert-danger">
+        invalid credentials
+      </div>
+
+
+
+      <h1 class="large text-primary">Login</h1>
       <p class="lead">
         <i class="fas fa-user"></i>
-        Create your Account
+        Sign into your Account
       </p>
-      <form id="register-form" class="form">
-        <div class="form-group">
-          <input id="name" type="text" placeholder="Name" required />
-        </div>
+      <form action="dashboard.html" id="login-form" class="form">
         <div class="form-group">
           <input id="email" type="email" placeholder="Email Address" />
           <small class="form-test">
@@ -60,14 +65,11 @@
         <div class="form-group">
           <input id="password" type="password" placeholder="Password" minlength="6" />
         </div>
-        <div class="form-group">
-          <input id="confirm-password" type="password" placeholder="confirm password" minlength="6" />
-        </div>
-        <input type="submit" value="register" class="btn btn-primary">
+        <input type="submit" value="Login" class="btn btn-primary">
       </form>
-      <p class="my-1">Already have an account? <a href="login.html">Sign in</a></p>
+      <p class="my-1">Don't have an account? <a href="register.html">Sign up</a></p>
     </section>
 
-    <script src="script/index.js"></script>
+    <!-- <script src="script/script.js"></script> -->
   </body>
 </html>
