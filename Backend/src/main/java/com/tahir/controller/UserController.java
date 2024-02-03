@@ -1,21 +1,21 @@
 package com.tahir.controller;
 
-import com.tahir.entity.User;
+import com.tahir.model.User;
 import com.tahir.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin("http://localhost:5500")
 @RestController
+@RequestMapping("/api")
 public class UserController {
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
-//    save operation
-    @PostMapping("/user")
-    public User saveUser(@RequestBody User user) {
-        return userService.saveUser(user);
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
+    @PostMapping("/register")
+    public User createUser(@RequestBody User user) {
+        return userService.createUser(user);
+    }
+
 }

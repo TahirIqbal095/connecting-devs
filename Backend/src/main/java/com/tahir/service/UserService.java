@@ -1,7 +1,8 @@
 package com.tahir.service;
 
-import com.tahir.entity.User;
+import com.tahir.model.User;
 
 public interface UserService {
-    User saveUser(User user);
+
+    User createUser(User user);
 }
