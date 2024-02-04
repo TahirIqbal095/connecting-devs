@@ -1,6 +1,6 @@
-const loginForm = document.getElementById("register-form");
+const registerForm = document.getElementById("register-form");
 
-loginForm.addEventListener("submit", function (event) {
+registerForm.addEventListener("submit", function (event) {
   // prevent default submission
   event.preventDefault();
 

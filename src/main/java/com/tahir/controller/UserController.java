@@ -1,12 +1,12 @@
 package com.tahir.controller;
 
-import com.mysql.cj.log.Log;
 import com.tahir.model.LoginUser;
 import com.tahir.model.User;
 import com.tahir.service.UserService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:5500")
+@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -20,8 +20,7 @@ public class UserController {
         return userService.createUser(user);
     }
     @PostMapping("/login")
-    public LoginUser findUser(@RequestBody LoginUser loginUser) {
-        return userService.findUser(loginUser);
+    public ResponseEntity<String> findUser(@RequestBody LoginUser user) {
+        return userService.findUser(user);
     }
-
 }
