@@ -1,5 +1,7 @@
 package com.tahir.controller;
 
+import com.mysql.cj.log.Log;
+import com.tahir.model.LoginUser;
 import com.tahir.model.User;
 import com.tahir.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,10 @@ public class UserController {
     @PostMapping("/register")
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
+    }
+    @PostMapping("/login")
+    public LoginUser findUser(@RequestBody LoginUser loginUser) {
+        return userService.findUser(loginUser);
     }
 
 }

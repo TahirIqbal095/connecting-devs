@@ -1,6 +1,7 @@
 package com.tahir.service;
 
 import com.tahir.entity.UserEntity;
+import com.tahir.model.LoginUser;
 import com.tahir.model.User;
 import com.tahir.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
@@ -20,5 +21,10 @@ public class UserServiceImpl implements UserService{
         BeanUtils.copyProperties(user, userEntity);
         userRepository.save(userEntity);
         return user;
+    }
+
+    @Override
+    public LoginUser findUser(LoginUser loginUser) {
+        return loginUser;
     }
 }
