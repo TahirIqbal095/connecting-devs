@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     public UserServiceImpl(UserRepository userRepository) {
@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService{
     public ResponseEntity<String> findUser(@RequestBody LoginUser user) {
         UserEntity ue = userRepository.findByEmail(user.getEmail());
 
-        if(ue != null && ue.getPassword().equals(user.getPassword())) {
+        if (ue != null && ue.getPassword().equals(user.getPassword())) {
             return ResponseEntity.ok("login successful");
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("invalid username and password");
