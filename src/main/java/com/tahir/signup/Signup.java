@@ -1,9 +1,9 @@
-package com.tahir.model;
+package com.tahir.signup;
 
 import lombok.Data;
 
 @Data
-public class User {
+public class Signup {
     private int userId;
 
     private String name;

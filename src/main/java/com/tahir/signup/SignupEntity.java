@@ -1,12 +1,12 @@
-package com.tahir.entity;
+package com.tahir.signup;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "registered_users")
+@Table(name = "UserRegistration")
 @Data
-public class UserEntity {
+public class SignupEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
@@ -15,11 +15,11 @@ public class UserEntity {
     private String email;
     private String password;
 
-    public UserEntity() {
+    public SignupEntity() {
 
     }
 
-    public UserEntity(String name, String email, String password) {
+    public SignupEntity(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
