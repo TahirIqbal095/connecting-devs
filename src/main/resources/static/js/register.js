@@ -10,7 +10,7 @@ registerForm.addEventListener("submit", function (event) {
   const password = document.getElementById("password").value;
 
   // send data to backend
-  fetch("http://localhost:8080/api/register", {
+  fetch("http://localhost:8080/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

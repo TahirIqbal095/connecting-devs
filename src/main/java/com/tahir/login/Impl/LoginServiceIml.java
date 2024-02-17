@@ -1,17 +1,30 @@
 package com.tahir.login.Impl;
 
-import com.tahir.login.LoginEntity;
-import com.tahir.login.LoginRepo;
+import com.tahir.login.Login;
+import com.tahir.login.LoginRepository;
 import com.tahir.login.LoginService;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class LoginServiceIml implements LoginService {
 
-    private final LoginRepo repo;
+    private final LoginRepository repository;
 
-    public LoginServiceIml(LoginRepo repo) {
-        this.repo = repo;
+    public LoginServiceIml(LoginRepository repository) {
+        this.repository = repository;
+    }
+
+    @Override
+    public boolean findUser(Login login) {
+        String email = login.getEmail();
+        return repository.findByEmail(email) != null;
     }
 }
+
+/**
+ *
+ * GET - SELECT
+ * POST - INSERT
+ * PUT - UPDATE
+ * DELETE - DELETE
+ */
