@@ -82,12 +82,12 @@
   max-width: 800px;
   margin: auto;
   overflow: hidden;
-  padding: 0 2.1rem;
+  padding: 1rem 2.1rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
 }
 .container p > i {
-  color: #17a2b8;
+  color: #059669;
 }
 
 .x-large {
@@ -108,11 +108,11 @@
 }
 
 .text-primary {
-  color: #17a2b8;
+  color: #059669;
 }
 
 .bg-primary {
-  background-color: #17a2b8;
+  background-color: #059669;
   color: #fff;
 }
 .bg-light {
@@ -152,11 +152,11 @@
   transition: all 0.2s ease-in;
 }
 .btn.btn-primary {
-  background-color: #17a2b8;
+  background-color: #059669;
   color: #fff;
 }
 .btn.btn-primary:hover {
-  background: #1ab6cf;
+  background: #06af7a;
 }
 .btn.btn-dark {
   background-color: #343a40;
@@ -193,7 +193,7 @@
   color: #333;
 }
 .alert.alert-primary {
-  background-color: #17a2b8;
+  background-color: #059669;
   color: #fff;
 }
 .alert.alert-dark {
@@ -235,7 +235,7 @@
   display: block;
   width: 100%;
   padding: 0.4rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: 1px solid #ccc;
 }
 
@@ -255,7 +255,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #17a2b8;
+  color: #059669;
 }
 
 h1 {
@@ -280,7 +280,7 @@ img {
   z-index: 10;
   width: 100%;
   top: 0;
-  border-bottom: 1px solid #17a2b8;
+  border-bottom: 1px solid #059669;
   opacity: 0.8;
 }
 .navbar ul {
@@ -292,7 +292,7 @@ img {
   margin: 0 0.25rem;
 }
 .navbar a:hover {
-  color: #17a2b8;
+  color: #059669;
 }
 
 .landing {
