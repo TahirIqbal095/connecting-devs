@@ -17,12 +17,12 @@ loginForm.addEventListener("submit", (e) => {
       password: password,
     }),
   })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((response) => {
         // Assuming the backend returns an 'ok' property
-        if (data.ok) {
+        if (response.ok) {
           // Redirect to a new page
-          window.location.href = "/dashboard";
+          window.location = "/dashboard";
         } else {
           // Handle login error
           alert("Login failed. Please try again.");
@@ -30,6 +30,5 @@ loginForm.addEventListener("submit", (e) => {
       })
       .catch(error => {
         console.error("Error:", error);
-        alert("An error occurred. Please try again later.");
       });
 });
