@@ -1,0 +1,27 @@
+@use "../utils" as u;
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: u.rem(12) u.rem(28);
+    border: none;
+    cursor: pointer;
+    font-size: u.rem(20);
+    margin-right: u.rem(32);
+    outline: none;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: var(--primary-hover);
+    }
+
+    &-secondary {
+        background-color: var(--dark-color);
+
+        &:hover {
+            background-color: var(--dark-hover);
+        }
+    }
+
+}

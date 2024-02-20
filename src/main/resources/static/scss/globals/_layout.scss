@@ -1,0 +1,13 @@
+@use "../utils" as u;
+
+.container {
+    width: calc(100% - u.rem(40));
+    margin: u.rem(86) auto;
+    overflow: hidden;
+    padding: u.rem(16) u.rem(32);
+    background-color: var(--light-color);
+
+    @include u.breakpoint(medium) {
+        width: calc(100% - u.rem(150));
+    }
+}

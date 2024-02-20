@@ -1,0 +1,18 @@
+@use "../utils" as u;
+
+.landing {    
+
+    &-button {
+        margin: u.rem(45) 0;
+    }
+
+    p {
+        font-size: u.rem(42);
+        font-weight: 500;
+        margin: u.rem(26) 0;
+        line-height: u.rem(44);
+    }
+    
+}
+
+        

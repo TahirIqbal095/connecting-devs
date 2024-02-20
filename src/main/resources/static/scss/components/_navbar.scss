@@ -1,0 +1,57 @@
+@use "../utils" as u;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: u.rem(16) u.rem(32);
+    position: fixed;
+    top: u.rem(20);
+    z-index: 10;
+    width: calc(100% - u.rem(40));
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-color);
+
+    @include u.breakpoint(medium) {
+        width: calc(100% - u.rem(150));
+    }
+ 
+    ul {
+        display: none;
+
+        @include u.breakpoint(medium) {
+            display: flex;
+        }
+    }
+
+    a {
+        font-size: u.rem(20);
+        color: var(--light-color);
+        padding: 0.45rem;
+        margin: 0 0.25rem;
+    }
+}
+
+.hamburger {
+    position: relative;
+    cursor: pointer;
+    top: u.rem(-3);
+    
+    &-line1,
+    &-line2 {
+        height: u.rem(3);
+        width: u.rem(30);
+        background-color: var(--light-color);
+    }
+
+    &-line2 {
+        position: absolute;
+        top: u.rem(8);
+
+    }
+
+    @include u.breakpoint(medium) {
+        display: none;
+    }
+}
