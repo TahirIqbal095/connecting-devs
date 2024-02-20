@@ -23,8 +23,8 @@ public class LoginServiceIml implements LoginService {
 
 /**
  *
- * GET - SELECT
- * POST - INSERT
+ * POST - CREATE
+ * GET - READ
  * PUT - UPDATE
  * DELETE - DELETE
  */

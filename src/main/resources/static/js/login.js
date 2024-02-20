@@ -6,7 +6,7 @@ loginForm.addEventListener("submit", (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch("http://localhost:8080/login", {
+  const response = fetch("http://localhost:8080/login", {
     method: "POST",
     headers: {
         Accept: "application/json",
@@ -16,19 +16,13 @@ loginForm.addEventListener("submit", (e) => {
       email: email,
       password: password,
     }),
-  })
-      .then((response) => response.json())
-      .then((response) => {
-        // Assuming the backend returns an 'ok' property
-        if (response.ok) {
-          // Redirect to a new page
-          window.location = "/dashboard";
-        } else {
-          // Handle login error
-          alert("Login failed. Please try again.");
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
+  });
+
+  if (response.ok) {
+    // Authentication successful
+    window.location.href = '/dashboard';
+} else {
+    // Authentication failed
+    document.getElementsByClassName('alert').style.display = 'block';
+}
 });
