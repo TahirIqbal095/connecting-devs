@@ -1,4 +1,12 @@
+@use "../utils" as u;
+
 .form {
+    width: calc(100% - u.rem(32));
+    margin: 0 auto;
+
+    @include u.breakpoint(medium) {
+        width: calc(100% - u.rem(100));
+    }
 
     &-group {
         margin: 1.2rem 0;
@@ -18,8 +26,9 @@
     textarea {
         display: block;
         width: 100%;
-        padding: 0.4rem;
-        font-size: 0.8rem;
+        padding: 0.6rem;
+        font-size: 1rem;
         border: 1px solid #ccc;
     }
+
 }

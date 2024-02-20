@@ -1,13 +1,17 @@
 @use "../utils" as u;
 
 .container {
-    width: calc(100% - u.rem(40));
-    margin: u.rem(86) auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
     overflow: hidden;
-    padding: u.rem(16) u.rem(32);
+    padding: 0 u.rem(26);
     background-color: var(--light-color);
 
     @include u.breakpoint(medium) {
-        width: calc(100% - u.rem(150));
+        width: calc(100% - u.rem(200));
     }
 }

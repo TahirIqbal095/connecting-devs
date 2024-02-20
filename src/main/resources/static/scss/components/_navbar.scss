@@ -6,16 +6,10 @@
     justify-content: space-between;
     padding: u.rem(16) u.rem(32);
     position: fixed;
-    top: u.rem(20);
+    top: 0;
     z-index: 10;
-    width: calc(100% - u.rem(40));
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     background: var(--dark-color);
-
-    @include u.breakpoint(medium) {
-        width: calc(100% - u.rem(150));
-    }
  
     ul {
         display: none;
