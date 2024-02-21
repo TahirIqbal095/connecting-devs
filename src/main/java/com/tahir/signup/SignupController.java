@@ -1,10 +1,10 @@
 package com.tahir.signup;
 
+import java.util.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.tahir.username.UsernameEntity;
 
 @RestController
 public class SignupController {
@@ -22,6 +22,11 @@ public class SignupController {
         } else {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
+    }
+
+    @GetMapping("/register")
+    public ResponseEntity<List<Signup>> getAllUsers() {
+        return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
     }
 
 }

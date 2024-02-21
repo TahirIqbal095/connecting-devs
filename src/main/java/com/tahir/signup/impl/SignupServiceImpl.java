@@ -1,12 +1,12 @@
 package com.tahir.signup.impl;
 
-import com.tahir.login.LoginEntity;
+import com.tahir.login.Login;
 import com.tahir.login.LoginRepository;
 import com.tahir.signup.Signup;
-import com.tahir.signup.SignupEntity;
 import com.tahir.signup.SignupRepository;
 import com.tahir.signup.SignupService;
-import com.tahir.username.UsernameEntity;
+
+import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -24,8 +24,8 @@ public class SignupServiceImpl implements SignupService {
     @Override
     public boolean createUser(Signup signup) {
         if(signup != null) {
-            SignupEntity signupEntity = new SignupEntity();
-            LoginEntity loginEntity = new LoginEntity();
+            Signup signupEntity = new Signup();
+            Login loginEntity = new Login();
 
             BeanUtils.copyProperties(signup, signupEntity);
 
@@ -37,5 +37,10 @@ public class SignupServiceImpl implements SignupService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<Signup> getAllUsers() {
+        return signupRepository.findAll();
     }
 }

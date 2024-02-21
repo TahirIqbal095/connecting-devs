@@ -1,7 +1,9 @@
 package com.tahir.signup;
 
-import com.tahir.username.UsernameEntity;
+import java.util.List;
 
 public interface SignupService {
     boolean createUser(Signup signup);
+
+    List<Signup> getAllUsers();
 }

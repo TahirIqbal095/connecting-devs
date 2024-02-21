@@ -18,7 +18,7 @@ public class UsernameController {
 
 
     @PutMapping("/register/{id}")
-    public ResponseEntity<HttpStatus> addUserName(@RequestBody UsernameEntity username, @PathVariable int id) {
+    public ResponseEntity<HttpStatus> addUserName(@RequestBody Username username, @PathVariable int id){
         boolean added = service.addUserName(username, id);
 
         if(added) {
