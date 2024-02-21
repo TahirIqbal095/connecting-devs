@@ -1,11 +1,16 @@
 package com.tahir.signup;
 
+import com.tahir.username.Username;
+import com.tahir.username.UsernameEntity;
+
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "UserRegistration")
 @Data
+@NoArgsConstructor
 public class SignupEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,23 +20,7 @@ public class SignupEntity {
     private String email;
     private String password;
 
-    public SignupEntity() {
-
-    }
-
-    public SignupEntity(String name, String email, String password) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", name='" + name + '\'' +
-                ", about='" + email + '\'' +
-                ", birthDate=" + password +
-                '}';
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "username_id")
+    private UsernameEntity username;
 }

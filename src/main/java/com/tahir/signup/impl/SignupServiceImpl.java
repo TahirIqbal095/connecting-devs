@@ -6,6 +6,8 @@ import com.tahir.signup.Signup;
 import com.tahir.signup.SignupEntity;
 import com.tahir.signup.SignupRepository;
 import com.tahir.signup.SignupService;
+import com.tahir.username.UsernameEntity;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 

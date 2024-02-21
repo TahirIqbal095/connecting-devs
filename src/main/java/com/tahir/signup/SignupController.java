@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.tahir.username.UsernameEntity;
+
 @RestController
 public class SignupController {
     private final SignupService userService;
@@ -11,6 +13,7 @@ public class SignupController {
     public SignupController(SignupService userService) {
         this.userService = userService;
     }
+
     @PostMapping("/register")
     public ResponseEntity<HttpStatus> createUser(@RequestBody Signup signup) {
         boolean created = userService.createUser(signup);
