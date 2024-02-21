@@ -1,6 +1,6 @@
 const registerForm = document.getElementById("register-form");
 
-registerForm.addEventListener("submit", function (event) {
+registerForm.addEventListener("submit",async function (event) {
   // prevent default submission
   event.preventDefault();
 
@@ -10,7 +10,7 @@ registerForm.addEventListener("submit", function (event) {
   const password = document.getElementById("password").value;
 
   // send data to backend
-  fetch("http://localhost:8080/register", {
+  const response = await fetch("http://localhost:8080/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,14 +20,5 @@ registerForm.addEventListener("submit", function (event) {
       email: email,
       password: password,
     }),
-  })
-    .then(function (response) {
-      return response.json;
-    })
-    .then(function (data) {
-      console.log(data);
-    })
-    .catch(function (error) {
-      console.error("Error:", error);
-    });
+  });
 });
